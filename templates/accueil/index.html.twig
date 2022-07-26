@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Accueil{% endblock %}
+
+{% block body %}
+
+<br><style>{% include 'accueil/css/style.css' %}</style><br>
+
+<div class="wrapper">
+    {% for sujet in sujets %}
+        <a href="{{ path('sujet', {'id': sujet.id}) }}">
+        <div class="sujet">
+            <p class="sujet_nom">{{ sujet.nom }}</p>
+            <p class="desc">{{ sujet.description }}</p>
+        </div>
+        </a>
+    {% endfor %}
+
+    <a href="{{ path('addSujet') }}" class="btn2">Nouveau</a>
+</div>
+
+{% endblock %}

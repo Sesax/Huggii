@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+<br><style>{% include 'sujet/css/style.css' %}</style><br>
+
+<div class="wrapper">
+
+    <a href="{{ path('accueil') }}" class="btn2">Retour</a>
+
+    <h1>Créer un nouveau sujet</h1>
+    <form action="{{ path('addSujet') }}" method="post">
+        <input name="nom" type="text" class="input__text" placeholder="Titre du topic"><br>
+        <input name="description" type="text" class="input__text" placeholder="Description du sujet"><br>
+        <input type="submit" value="Confirmer">
+    </form>
+</div>
+
+{% endblock %}

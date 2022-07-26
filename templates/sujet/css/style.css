@@ -1,0 +1,98 @@
+body {
+    --color-primary: #d07d7e;
+    --color-primary-dark: #bd4f54;
+    --color-secondary: #051441;
+    --color-background: #eeedef;
+    --color-bg1: #2c2e43;
+    --color-bg2: #5a5c6b;
+    --color-error: #cc3333;
+    --color-success: #4bb544;
+    --border-radius: 4px;
+
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    font-size: 18px;
+    color: var(--color-secondary);
+    background-color: white;
+    font: 500 1rem 'Quicksand', sans-serif;
+    background: linear-gradient(100deg, var(--color-bg1), var(--color-bg2));
+}
+
+.wrapper {
+    background-color: var(--color-background);
+    width: 50%;
+    height: 100%;
+    text-align: center;
+}
+
+h1 {
+    margin-top: 20%;
+    font-weight: bold;
+}
+
+p {
+    width: 80%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 16px;
+}
+
+input[type=text],
+input[type=number],
+select,
+textarea {
+    width: 80%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+}
+
+input[type=submit] {
+    background-color: var(--color-primary);
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: var(--color-primary-dark);
+}
+
+.container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+.btn2:link,
+.btn2:visited {
+    border: none;
+    border-radius: var(--border-radius);
+    background-color: var(--color-primary);
+    color: white;
+    padding: 5px 10px;
+    margin-left: 3px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.btn2:hover,
+.btn2:active {
+    background-color: var(--color-primary-dark);
+}

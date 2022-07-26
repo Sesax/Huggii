@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+<br><style>{% include 'sujet/css/styleView.css' %}</style><br>
+
+<div class="wrapper">
+
+    <a href="{{ path('accueil') }}" class="btn2">Retour</a>
+
+    <h1>{{ sujet.nom }}</h1>
+    <div class="messages">
+    {% for message in messages %}
+        <div class="message">
+            <p class="contenu">{{ message.contenu }}</p>
+        </div>
+        <h2>{{ message.dateCreation|date('Y-m-d H:i:s') }}</h2>
+    {% endfor %}
+    </div>
+
+    <form action="{{ path('messageAdd', {'id': sujet.id}) }}" method="post" class="post">
+        <input name="message" type="text" class="input__text" placeholder="Message..."><br>
+        <input type="submit" value="Poster">
+    </form>
+</div>
+
+{% endblock %}
