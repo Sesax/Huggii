@@ -31,7 +31,8 @@ body {
     color: white;
     background-color: var(--color-bg1);
     flex-grow: 1;
-    min-height: 100px;
+    min-height: 50px;
+    max-height: 50px;
     overflow: auto;
     border: var(--color-bg1) 1px solid;
     display: flex;
